@@ -19,8 +19,8 @@ public class Question {
    @Id
    @SequenceGenerator(
            name = "question_sequence",
-           sequenceName = "question_sequence",
-           allocationSize = 1000)
+           sequenceName = "question_sequence")
+
 
   @GeneratedValue(
           strategy = GenerationType.SEQUENCE,

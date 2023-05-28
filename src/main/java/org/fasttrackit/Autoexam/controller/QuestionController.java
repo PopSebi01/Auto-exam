@@ -41,7 +41,7 @@ public class QuestionController {
             return ResponseEntity.badRequest().body("Exam has already started.");
         }
         currentQuestion = service.getRandomQuestion();
-        correctAnswersCount=0;
+        correctAnswersCount = 0;
         if (currentQuestion != null) {
             return ResponseEntity.ok(currentQuestion.getQuestion());
         } else {
@@ -85,8 +85,6 @@ public class QuestionController {
             } else {
                 return ResponseEntity.ok("Exam failed. You answered " + correctAnswersCount + " questions correctly out of " + totalQuestionsCount + " questions.");
             }
-//            currentQuestion = null;
-//            return ResponseEntity.ok("Exam finished. No more questions available.");
         }
     }
 
